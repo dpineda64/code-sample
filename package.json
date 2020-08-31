@@ -1,0 +1,36 @@
+{
+  "name": "vg-kit",
+  "version": "1.0.0",
+  "description": "a ui-kit for voiager",
+  "author": "dpineda64 <daniel64pineda@gmail.com>",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "compile": "lerna run compile",
+    "build": "lerna run build",
+    "build:icons": "npx @svgr/cli svgs  --out-dir=packages/components/src/icon/icons --typescript --filename-case=kebab",
+    "gen:icons": "yarn build:icons && yarn clean:icons && yarn write:icons",
+    "write:icons": "node scripts/generate-icons.js --svgs=packages/components/src/icon/icons",
+    "clean:icons": "shx rm packages/components/src/icon/icons/index.tsx",
+    "clean": "lerna run clean",
+    "lint": "lerna run lint",
+    "test": "lerna run test"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.4",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-macros": "^2.8.0",
+    "lerna": "^3.22.1"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.35",
+    "@emotion/styled": "^10.0.27",
+    "postcss": "^7.0.32",
+    "shx": "^0.3.2",
+    "tailwindcss": "^1.7.3",
+    "twin.macro": "^1.7.0"
+  }
+}

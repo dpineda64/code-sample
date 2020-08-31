@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
+:root {
+  /* base */
+  --vg-black: #071108;
+  --vg-white: #ffffff;
+  --vg-blue: #245fd3;
+  --secondary: #f7f7f2;
+  --vg-yellow: #fac748;
+  /* states */
+  --vg-state-error: #ff3c38;
+  --vg-state-warning: var(--vg-yellow);
+  --vg-state-success: #52b788;
+  /* grays */
+  --vg-gray: #f4f5f6;
+  --vg-gray-light: #f7f7f2;
+  --vg-gray-border: rgba(123, 137, 151, 0.1);
+  /* text */
+  --vg-text: #576370;
+  --vg-text-secondary: rgba(43, 45, 66, 0.75);
+  /* palette */
+  --vg-primary: var(--vg-blue);
+  --vg-accent: #60e1e0;
+  --vg-background: #f5f6f8;
+  --vg-input-bg: #fff;
+  --vg-input-text: var(--vg-text);
+}
+
+@keyframe spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: var(--vg-background);
+  @apply text-txt-base fill-txt-base;
+}
