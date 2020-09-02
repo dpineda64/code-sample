@@ -13,4 +13,4 @@ export const H5 = styled('h5')({});
 
 export const Paragraph = styled('p')({});
 
-export const Quote = styled('hr')({});
+export const Quote = styled('blockquote')({});
